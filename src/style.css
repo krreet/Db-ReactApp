@@ -1,0 +1,23 @@
+h1, p {
+  font-family: Lato;
+}
+li:hover{
+ cursor: pointer;
+}
+.removeClass {
+  list-style-type: none;
+  padding:16px 0px 0px 0px;
+}
+._icon {
+  margin-top: -4px;
+  font-size: 30px !important;
+}
+
+.bg{
+	background-color: #333;
+	color: #fff;
+}
+.list{
+  padding:10px;          
+  border:1px solid #CECECE;
+}
