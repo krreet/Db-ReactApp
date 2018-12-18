@@ -21,3 +21,10 @@ li:hover{
   padding:10px;          
   border:1px solid #CECECE;
 }
+.top_margin{
+  margin:20px 0px 0px 0px;
+}
+
+.top_left_margin{
+  margin:20px 0px 0px 15px;
+}
