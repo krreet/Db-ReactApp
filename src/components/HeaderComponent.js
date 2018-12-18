@@ -1,6 +1,4 @@
-
-import React, { Component, PropTypes } from 'react';
-
+import React, { Component, PropTypes }from 'react';
 import SubHeaderComponent from './SubHeaderComponent'
 
 
@@ -25,17 +23,17 @@ export default class HeaderComponent extends React.Component {
   render() {
     return (
       <div>
-         <div style={{margin:'20px 0px 0px 0px'}} className="alert alert-dark">
-            {/*<ul class="nav nav-pills">
-              <li className="nav-item" onClick= {() => this.showSomeData()}>
+         <div className="alert alert-dark top_margin">
+            <ul className="nav nav-pills">
+              <li className="nav-item col-sm-6 col-md-6" onClick= {() => this.showSomeData()}>
                 <a className={"nav-link" + (this.state.addClass ? ' active':'')} href="#">DB Bank</a>
               </li>
-              <li className="nav-item " onClick={() => this.showMoreData()}>
+              <li className="nav-item col-sm-6 col-md-6" onClick={() => this.showMoreData()}>
                 <a className={"nav-link" + (this.state.addnewClass ? ' active':'')}  href="#">HF Bank</a>
               </li>
-            </ul> */}
-   <ul className="nav nav-tabs">
-    <li className="active"><a data-toggle="tab" href="#home" onClick= {() => this.showSomeData()}>DB Bank</a></li>&nbsp;
+            </ul> 
+   {/*<ul className="nav nav-tabs">
+    <li className="active">DB Bank<a data-toggle="tab" onClick= {() => this.showSomeData()}>DB Bank</a></li>&nbsp;
     <li><a data-toggle="tab" href="#menu1" onClick= {() => this.showMoreData()}>HF Bank</a></li>
   </ul>&nbsp;
 
@@ -47,7 +45,7 @@ export default class HeaderComponent extends React.Component {
     <div id="menu1" className="tab-pane fade">
       <SubHeaderComponent showMore={this.state.showMore}/>
     </div>
-  </div>
+  </div>*/}
 
            {/* <Tabs
       activeTab={{

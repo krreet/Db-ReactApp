@@ -17,15 +17,14 @@ function SubHeaderComponent(props){
               </div>)
     }
   else{
- disp =  <div>blank</div>
+  disp = <div></div>
   }
-
-
-  return (<div style={{margin:'20px 0px 0px 0px'}}>
+  return(
+    <div className="top_margin">
       {disp}
-    </div>)
+    </div>
         
-  
+  )
 }
 
 export default SubHeaderComponent

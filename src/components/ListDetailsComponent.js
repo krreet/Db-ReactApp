@@ -1,43 +1,21 @@
 import React from 'react';
-
-const DataArray = [
-  {category:1,
-  empId:157,
-  data : "Lorem Ipsum ",
-  age:28,
-  address:"Pune"
-  },
-  {category:2,
-  empId:158,
-  data : "Lorem Ipsum2 ",
-  age:29, address:"Pune"},
-  {category:3,
-  empId:159,
-  data : "Lorem Ipsum3 ",
-  age:32,  address:"Pune"},
-  {category:4,
-  empId:159,
-  data : "Lorem Ipsum4 ",
-  age:34, address:"Pune"}
-]
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import JsonData from '../data/data';
 
 const ListDetailsComponent = ({DetailsShow, dataNo}) => {
-  const detailsData = null;
+  let detailsData = null;
   if(DetailsShow == "more"){
         return(
-            detailsData = <div><span><b>Reports</b></span> 
-            <div className="rounded list">
-               {DataArray[dataNo - 1].data}
-               <table>
-                <th><td>EMP Id</td></th>
-                <th><td>EMP Name</td></th>
-                <th><td>EMP Age</td></th>
-                <th><td>EMP Adress</td></th>
-               </table>
-            </div></div>
+            detailsData = 
+              <div>
+              <span><b>Reports</b></span> 
+                <div className="rounded list">
+                <TableRow data={JsonData.DataArray}/>
+            </div>
+            </div>
       )
   }else{
-    detailsData =  <div></div>
+  detailsData = <div></div>
   }
   return (
      <div>
@@ -46,3 +24,34 @@ const ListDetailsComponent = ({DetailsShow, dataNo}) => {
   )
 }
 export default ListDetailsComponent;
+
+class TableRow extends React.Component {
+  render() {
+    const {
+      data
+    } = this.props;
+    const row = data.map((data, key) =>
+    <tr key={key}>
+      <Link to="/MoreDetailsComponent"><td key={data.empId}>{data.empId}</td></Link>
+      <td key={data.data}>{data.data}</td>
+      <td key={data.age}>{data.age}</td>
+      <td key={data.address}>{data.address}</td>
+    </tr>
+    )
+    return (
+      <table className="table table-hover">
+                <thead>
+                  <tr>
+                    <th>EmpId</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Address</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {row}
+                </tbody>
+      </table>
+    );
+  }
+}
