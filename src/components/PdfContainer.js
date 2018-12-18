@@ -39,6 +39,7 @@ class PdfContainer extends React.Component {
  
   render() {
     const { pageNumber, numPages } = this.state;
+    
  
     return (
       <div>
@@ -65,6 +66,8 @@ class PdfContainer extends React.Component {
   // })
   // ;
 
+
+
 var options = {
   method: 'GET',
   mode: 'cors',
@@ -73,6 +76,8 @@ var options = {
 
 fetch(API).then( response => response.text()).then(data => this.setState({pdfString : data}))
   
+
+
 // fetch(request, options).then((response) => {
 //   response.arrayBuffer().then((buffer) => {
 //     var base64Flag = 'data:application/pdf;base64,';
