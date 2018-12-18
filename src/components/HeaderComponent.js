@@ -1,5 +1,5 @@
-import React, { Component, PropTypes }from 'react';
-import SubHeaderComponent from './SubHeaderComponent'
+import React from 'react';
+//import SubHeaderComponent from './SubHeaderComponent'
 
 
 export default class HeaderComponent extends React.Component {
@@ -8,14 +8,12 @@ export default class HeaderComponent extends React.Component {
     this.state={addClass:false,addnewClass: false}
   }
   showSomeData = () => {
-    this.setState({addClass:true})
-    this.setState({addnewClass:false})
+    this.setState({addClass:true,addnewClass:false})
     this.props.showSomeData();
     this.setState({showMore : "some"})
   }
   showMoreData = () => {
-    this.setState({addClass:false})
-    this.setState({addnewClass:true})
+    this.setState({addClass:false,addnewClass:true})
     this.props.showMoreData();
     this.setState({showMore : "more"})
   }
@@ -78,7 +76,6 @@ export default class HeaderComponent extends React.Component {
       )}
     </Tabs>*/}
          </div>
-         
       </div>  
      
     )

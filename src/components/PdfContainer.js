@@ -1,25 +1,25 @@
 
 import React from 'react';
 import { Document, Page } from 'react-pdf';
-import file from './file.pdf';
+//import file from './file.pdf';
 
 import { pdfjs } from 'react-pdf';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
-function arrayBufferToBase64(buffer) {
-  var binary = '';
-  var bytes = [].slice.call(new Uint8Array(buffer));
+// function arrayBufferToBase64(buffer) {
+//   var binary = '';
+//   var bytes = [].slice.call(new Uint8Array(buffer));
 
-  bytes.forEach((b) => binary += String.fromCharCode(b));
+//   bytes.forEach((b) => binary += String.fromCharCode(b));
 
-  return window.btoa(binary);
-};
+//   return window.btoa(binary);
+// };
 
 
 const API = 'https://db-pdf-api.herokuapp.com/pdf64';
 
 
-var request = new Request(API);
+//var request = new Request(API);
 
 class PdfContainer extends React.Component {
   constructor(props) {
@@ -68,11 +68,11 @@ class PdfContainer extends React.Component {
 
 
 
-var options = {
-  method: 'GET',
-  mode: 'cors',
-  cache: 'default'
-};
+// var options = {
+//   method: 'GET',
+//   mode: 'cors',
+//   cache: 'default'
+// }; 
 
 fetch(API).then( response => response.text()).then(data => this.setState({pdfString : data}))
   

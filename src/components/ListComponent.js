@@ -2,11 +2,8 @@ import React from 'react';
 
 
 export default class ListComponent extends React.Component {
-  constructor(props){
-    super(props);
-  }
+
   showDetails = (id) => {
-    //console.log(e.target, e.target.getAttribute('data-key'),"EVENT");
     this.props.showDetails(id);
   }
   render() { 
@@ -30,7 +27,7 @@ class SubList extends React.Component {
   }
   render(){
     return(
-      <li className={"rounded list-group-item " + (this.props.item.id == this.props.selectedId ?  'active' :  '' )} style={{padding:'10px', border:'1px solid #CECECE'}} key={this.props.item.id} onClick={this.handleClick}>{this.props.item.name}<i className="_icon pull-right fa fa-chevron-circle-right"></i></li>
+      <li className={"rounded list-group-item list " + (this.props.item.id === this.props.selectedId ?  'active' :  '' )} key={this.props.item.id} onClick={this.handleClick}>{this.props.item.name}<i className="_icon pull-right fa fa-chevron-circle-right"></i></li>
     )
   }
 }

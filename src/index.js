@@ -1,28 +1,10 @@
-import React, { Component } from 'react';
-import { render } from 'react-dom';
+import React from 'react';
 import ReactDOM from 'react-dom'
 import './style.css';
 import MainComponent from './components/MainComponent';
-import Users from './components/MainComponent';
 import MoreDetailsComponent from './components/MoreDetailsComponent';
-import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
-// class App extends Component {
-//   constructor() {
-//     super();
-//   }
-
-//   render() {
-//     const routing = (
-//       <Router>
-//         <div>
-//           <Route path="/Main" component={MainComponent} />
-//           <Route path="/users" component={Users} />
-//         </div>
-//       </Router>
-//     )
-//   }
-// }
 const routing = (
   <Router>
     <div>

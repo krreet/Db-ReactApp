@@ -1,10 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import JsonData from '../data/data';
 
 const ListDetailsComponent = ({DetailsShow, dataNo}) => {
   let detailsData = null;
-  if(DetailsShow == "more"){
+  if(DetailsShow === "more"){
         return(
             detailsData = 
               <div>
@@ -32,7 +32,7 @@ class TableRow extends React.Component {
     } = this.props;
     const row = data.map((data, key) =>
     <tr key={key}>
-      <Link to="/MoreDetailsComponent"><td key={data.empId}>{data.empId}</td></Link>
+      {<Link to="/MoreDetailsComponent"><td key={data.empId}>{data.empId}</td></Link>}
       <td key={data.data}>{data.data}</td>
       <td key={data.age}>{data.age}</td>
       <td key={data.address}>{data.address}</td>

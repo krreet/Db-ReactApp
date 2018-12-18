@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import PDFContainer from './PdfContainer'
 
 class MoreDetailsComponent extends React.Component {
@@ -10,9 +10,7 @@ class MoreDetailsComponent extends React.Component {
     }
   }
   showPdf= ()=>{
-    console.log("In show");
     this.setState({show : true})
-    console.log("In show", this.state.show);
   }
   render(){
     return(

@@ -3,7 +3,6 @@ import HeaderComponent from './HeaderComponent'
 import ListComponent from './ListComponent'
 import SubHeaderComponent from './SubHeaderComponent'
 import ListDetailsComponent from './ListDetailsComponent'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 const contacts = [
   { id: 1, name: "Leanne Graham" },
